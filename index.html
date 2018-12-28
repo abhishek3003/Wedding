@@ -8,8 +8,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Abhishek & Abha</title>
-<audio src="/music/bgmusic.mp3" autoplay>
-</audio>
+<embed src="music/bgmusic.mp3" autostart="true" loop="true" width="2" height="0">
+</embed>
 <style type="text/css">
 	html, body {
 		max-width: 100%;
@@ -120,7 +120,12 @@
 </div>
 <!-- /End of Page loader
 ========================================================= -->
-
+<div id="player">
+    <audio autoplay hidden>
+     <source src="music/bgmusic.mp3" type="audio/mpeg">
+                
+    </audio>
+</div>
 <!-- === PAGE BACKGROUND === -->
 <!-- Background container -->
 <div class="page-background-container viewport">
@@ -407,6 +412,7 @@
 
 </script>
 <script>
+
 
 $( "#header-plugin" ).load( "https://vivinantony.github.io/header-plugin/", function() {
 	$("a.back-to-link").attr("href", "http://blog.thelittletechie.com/2015/03/love-heart-animation-using-css3.html#tlt")  
