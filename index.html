@@ -121,10 +121,13 @@
 <!-- /End of Page loader
 ========================================================= -->
 <div id="player">
-    <audio autoplay hidden>
-     <source src="music/bgmusic.mp3" type="audio/mpeg">
+    <!-- <audio autoplay hidden> -->
+     <!-- <source src="music/bgmusic.mp3" type="audio/mpeg"> -->
                 
-    </audio>
+    <!-- </audio> -->
+	<audio id= "audio1" controls="controls" onloadeddata="setHalfVolume()">
+    <source src="music/bgmusic.mp3"  type="audio/mp3">
+</audio>
 </div>
 <!-- === PAGE BACKGROUND === -->
 <!-- Background container -->
@@ -135,7 +138,7 @@
 	<!-- background-slideshow -->
 	<div class="bg-slideshow">
 		<!-- slideshow-item -->
-		<div class="page-background viewport" style="background-image: url('img/slide-bg1.jpg'); min-height:700px;"></div>
+		<div class="page-background viewport" style="background-image: url('img/slide-bg1.jpg')"></div>
 		<!-- /slideshow-item -->	
 	</div>
 	<!--/Background-slideshow -->
@@ -528,9 +531,16 @@ var love = setInterval(function() {
 		map.setCenter(center); 
 		});
       }
+	  
+	  function setHalfVolume() {
+    var myAudio = document.getElementById("audio1");  
+    myAudio.volume = 0.1; //Changed this to 0.5 or 50% volume since the function is called Set Half Volume ;)
+}
     </script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDv9mWYJbLo11WHT4DbzSRWJSNNBvJx7ao&callback=initMap">
     </script>
+	
+	
 </body>
 </html>
